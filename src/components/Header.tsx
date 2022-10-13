@@ -12,13 +12,17 @@ function Header() {
 				<div className='flex justify-between'>
 					<div className='flex space-x-4'>
 						<Scroll
-							to='about'
+							to='home'
 							spy={true}
 							smooth={true}
 							offset={-100}
 							duration={100}
 							className='flex items-center py-5 md:py-0 text-3xl font-bold cursor-pointer'>
-							<img src={Logo} alt='Logo' className='w-60 md:w-full' />
+							<img
+								src={Logo}
+								alt='Logo'
+								className='w-60 md:w-full animate-shake hover:animate-shake'
+							/>
 						</Scroll>
 					</div>
 					<div className='hidden md:flex items-center space-x-1 nav-item'>
@@ -30,7 +34,7 @@ function Header() {
 							</Link>
 						) : (
 							<Scroll
-								to='about'
+								to='home'
 								spy={true}
 								smooth={true}
 								offset={-100}
@@ -49,6 +53,15 @@ function Header() {
 							Tokenomics
 						</Scroll>
 						<Scroll
+							to='about'
+							spy={true}
+							smooth={true}
+							offset={-100}
+							duration={100}
+							className='py-5 font-qanelas px-3 text-xl font-bold cursor-pointer text-red-500'>
+							About & Services
+						</Scroll>
+						<Scroll
 							to='team'
 							spy={true}
 							smooth={true}
@@ -64,7 +77,7 @@ function Header() {
 							className='py-5 font-qanelas px-3 text-xl font-bold cursor-pointer text-red-500'>
 							Chart
 						</a>
-						
+
 						{/* {pathname === '/stake' ? <button className="block w-full max-w-xs mx-auto bg-gradient-to-r from-purple-600 to-pink-600  text-white rounded-full px-10 py-3 font-qanelas font-semibold">Connet Wallet</button> : null} */}
 					</div>
 					<div className='md:hidden flex items-center'>
@@ -85,7 +98,8 @@ function Header() {
 					</div>
 				</div>
 				<div className={`md:hidden nav-item ${open ? "" : "hidden"}`}>
-					{pathname === "/" ? (
+					{/* {console.log(pathname)} */}
+					{pathname === "/informations" ? (
 						<Link
 							to='./'
 							className='block py-2 px-0 md:px-4 text-xl font-bold text-red-600 font-qanelas'>
@@ -93,7 +107,7 @@ function Header() {
 						</Link>
 					) : (
 						<Scroll
-							to='about'
+							to='home'
 							spy={true}
 							smooth={true}
 							offset={-100}
@@ -112,6 +126,15 @@ function Header() {
 						Tokenomics
 					</Scroll>
 					<Scroll
+						to='about'
+						spy={true}
+						smooth={true}
+						offset={-100}
+						duration={100}
+						className='block py-2 px-0 md:px-4 text-xl font-bold cursor-pointer text-red-600 font-qanelas'>
+						About & Services
+					</Scroll>
+					<Scroll
 						to='team'
 						spy={true}
 						smooth={true}
@@ -127,7 +150,7 @@ function Header() {
 						className='block py-2 px-0 md:px-4 text-xl font-bold cursor-pointer text-red-600 font-qanelas'>
 						Chart
 					</a>
-					
+
 					{/* {pathname === '/stake' ? <button className="block w-full max-w-xs mx-auto bg-gradient-to-r from-purple-600 to-pink-600  text-white rounded-full px-10 py-3 font-qanelas font-semibold">Connet Wallet</button> : null} */}
 				</div>
 			</nav>
